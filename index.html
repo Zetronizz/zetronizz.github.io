@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zetronizz</title>
+
+    <!-- Иконка сайта в табе (вставьте прямую ссылку на вашу .ico или .png картинку) -->
+    <link rel="icon" type="image/png" href="https://zetronizz.github.io/favicon.png">
+
+    <!-- Заголовки для жёсткого кэширования на стороне браузера (на 1 год) -->
+    <meta http-equiv="Cache-Control" content="public, max-age=64000, immutable">
+    <meta http-equiv="Pragma" content="cache">
+    <meta http-equiv="Expires" content="Mon, 23 Aug 2027 12:00:00 GMT">
+
+    <style>
+        /* Принудительная темная тема и фоновый градиент */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, #121212 60%, #2e1065 100%);
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Контейнер визитки */
+        .card {
+            background-color: rgba(25, 25, 25, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+        }
+
+        /* Блок аватарки */
+        .avatar-container {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
+            position: relative;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover; /* Сохраняет пропорции фото */
+            border: 3px solid #6d28d9; /* Фиолетовая рамка в тон градиента */
+            box-shadow: 0 4px 15px rgba(109, 40, 217, 0.4);
+            background-color: #1a1a1a;
+        }
+
+        h1 {
+            margin: 0 0 5px 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: #a3a3a3;
+            font-size: 0.9rem;
+            margin: 0 0 25px 0;
+        }
+
+        /* Блок кнопок-ссылок */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: block;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, filter 0.2s;
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.2);
+        }
+
+        /* Кастомные цвета кнопок */
+        .btn-green {
+            background-color: #064e3b;
+            color: #ffffff;
+        }
+
+        .btn-red {
+            background-color: #991b1b;
+            color: #ffffff;
+        }
+        .btn-steam {
+            background-color: #171a21;
+            color: #ffffff;
+        }
+        .btn-white {
+            background-color: #ffffff;
+            color: #1e40af;
+        }
+
+        /* Форма отправки в Discord */
+        .feedback-form {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+        .feedback-form h3 {
+            margin: 0 0 12px 0;
+            font-size: 1rem;
+            color: #e5e5e5;
+        }
+
+        textarea {
+            width: 100%;
+            height: 80px;
+            background-color: #1a1a1a;
+            border: 1px solid #404040;
+            border-radius: 8px;
+            color: #ffffff;
+            padding: 10px;
+            resize: none;
+            box-sizing: border-box;
+            font-family: inherit;
+            margin-bottom: 10px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #6d28d9;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #6d28d9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #5b21b6;
+        }
+
+        .status-msg {
+            margin-top: 8px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Аватарка (Замените src на ссылку на ваше фото) -->
+        <div class="avatar-container">
+            <img class="avatar" src="https://zetronizz.github.io/avatar.jpg" alt="А">
+        </div>
+        
+        <h1>Zetronizz, также известный как Zetroniz, Zetro и Zet.</h1>
+        <p>Просто челик, увлекающийся вайбкодингом, код дружбы в дискорде: zetroniz</p>
+
+        <!-- Кнопки с ссылками -->
+        <div class="links-container">
+            <a href="https://ely.by/Zetronizz" target="_blank" class="btn btn-green">Ely.by профиль</a>
+            <a href="https://www.youtube.com/@Zetronizz" target="_blank" class="btn btn-red">YouTube Канал</a>
+            <a href="https://playerok.com/profile/Kaycrafter/products" target="_blank" class="btn btn-white">Мой Playerok</a>
+            <a href="https://steamcommunity.com/id/Zetroniz/" target="_blank" class="btn btn-steam">Мой Steam</a>
+            <a href="https://github.com/Zetroniz1" target="_blank" class="btn btn-steam">Мой GitHub</a>
+        </div>
+
+        <!-- Форма анонимных сообщений -->
+        <form class="feedback-form" id="discordForm">
+            <h3>Оставить анонимное сообщение</h3>
+            <textarea id="messageText" placeholder="Введите ваше сообщение здесь..." required></textarea>
+            <button type="submit" class="submit-btn" id="sendBtn">Отправить</button>
+            <div class="status-msg" id="statusMessage"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('discordForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // ВСТАВЬТЕ СЮДА ВАШ URL ВЕБХУКА ДИСКОРДА
+            const webhookUrl = 'https://discord.com/api/webhooks/1541244970030334012/HhnT4yQB2LF2OvqKc3c2bvC4uBs13g3_HA8QxBN7OqkMji1NrlC3xBv4Z4G6ozl2ai0X'; 
+            
+            const messageInput = document.getElementById('messageText');
+            const statusDiv = document.getElementById('statusMessage');
+            const sendBtn = document.getElementById('sendBtn');
+            const message = messageInput.value.trim();
+
+            if (!message) return;
+            if (webhookUrl === 'ВАШ_ВЕБХУК_ДИСКОРД_СЮДА') {
+                statusDiv.style.color = '#ef4444';
+                statusDiv.textContent = 'Ошибка: не настроен URL вебхука.';
+                return;
+            }
+
+            sendBtn.disabled = true;
+            sendBtn.textContent = 'Отправка...';
+            statusDiv.textContent = '';
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        embeds: [{
+                            title: "📩 Новое анонимное сообщение",
+                            description: message,
+                            color: 7153881,
+                            timestamp: new Date().toISOString()
+                        }]
+                    })
+                });
+
+                if (response.ok) {
+                    statusDiv.style.color = '#22c55e';
+                    statusDiv.textContent = 'Сообщение успешно отправлено!';
+                    messageInput.value = '';
+                } else {
+                    throw new Error('Ошибка сети, попробуйте включить VPN.');
+                }
+            } catch (error) {
+                statusDiv.style.color = '#ef4444';
+                statusDiv.textContent = 'Не удалось отправить сообщение.';
+            } finally {
+                sendBtn.disabled = false;
+                sendBtn.textContent = 'Отправить';
+            }
+        });
+    </script>
+</body>
+</html>
